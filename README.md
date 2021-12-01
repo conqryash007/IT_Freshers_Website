@@ -9,4 +9,5 @@ A website for freshers IT branch
 6. <a> Virag</a>
 7. <a >Smita</a>
 8. <a >Aditya</a>
+9. <a href="https://github.com/Simran1604">Simran Pattnaik</a>
 
