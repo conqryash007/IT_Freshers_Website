@@ -1,5 +1,4 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const httpError = require("./models/http-error");
 const fresherRoutes = require("./routes/freshers-routes");
 const taskRoutes = require("./routes/tasks-routes");
@@ -7,6 +6,16 @@ const taskRoutes = require("./routes/tasks-routes");
 const app = express();
 
 app.use(express.json());
+
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Origin,X-Requested-With,Content-Type,Accept,Authorization"
+  );
+  res.setHeader("Access-Control-Allow-Methods", "GET,POST,PATCH,DELETE");
+  next();
+});
 
 app.use("/api/freshers", fresherRoutes);
 
@@ -24,14 +33,4 @@ app.use((error, req, res, next) => {
   res.json({ message: error.message || "Something went wrong !" });
 });
 
-mongoose
-  .connect(
-    "mongodb+srv://conqryash007:ZKVKYUd0nKjdPEwS@cluster0.fbbfu.mongodb.net/freshers-website?retryWrites=true&w=majority"
-  )
-  .then(() => {
-    app.listen(5000);
-    console.log("Server started successfully👍");
-  })
-  .catch((err) => {
-    console.log(err.message);
-  });
+module.exports = app;

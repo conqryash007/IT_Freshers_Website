@@ -1,5 +1,6 @@
 const httpError = require("./../models/http-error");
 const Fresher = require("./../models/fresher");
+
 exports.getFreshers = (req, res) => {
   res.send("All Freshers Data");
 };
