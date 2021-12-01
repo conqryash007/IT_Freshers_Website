@@ -1,5 +1,9 @@
 # IT FRESHERS WEBSITE
-A website for freshers IT branch 
+<p align="center">
+<img src="https://github.com/conqryash007/IT_Freshers_Website/blob/main/public/freshers-website-logo.gif" /><br/>
+A WEBSITE FOR FRESHERS IT BRANCH
+  </p> 
+
 ## Team members
 1. <a href="https://github.com/ipsitasatapathy">Ipsita Satapathy</a>
 2. <a href="https://github.com/gsk-007">Gursimrat Kalra</a>
