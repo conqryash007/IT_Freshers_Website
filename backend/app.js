@@ -1,5 +1,6 @@
 const express = require("express");
 const httpError = require("./models/http-error");
+const mongoose = require("mongoose");
 const fresherRoutes = require("./routes/freshers-routes");
 const taskRoutes = require("./routes/tasks-routes");
 
@@ -33,4 +34,16 @@ app.use((error, req, res, next) => {
   res.json({ message: error.message || "Something went wrong !" });
 });
 
-module.exports = app;
+const port = process.env.PORT || 5000;
+
+mongoose
+  .connect(
+    `mongodb+srv://${process.env.DB_USER}:${process.env.PASSWORD}@cluster0.fbbfu.mongodb.net/freshers-website?retryWrites=true&w=majority`
+  )
+  .then(() => {
+    app.listen(port);
+    console.log("Server started successfully👍 at ", port);
+  })
+  .catch((err) => {
+    console.log(err.message);
+  });
