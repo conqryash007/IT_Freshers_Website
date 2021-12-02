@@ -1,6 +1,6 @@
 # IT FRESHERS WEBSITE
 <p align="center">
-<img src="https://github.com/conqryash007/IT_Freshers_Website/blob/main/public/freshers-website-logo.gif" /><br/>
+<img height="180px" width="400px" src="https://github.com/conqryash007/IT_Freshers_Website/blob/main/public/freshers-website-logo.gif" /><br/>
 A WEBSITE FOR FRESHERS IT BRANCH
   </p> 
 
