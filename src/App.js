@@ -1,8 +1,12 @@
+import Navbar from "./components/Navbar";
+
 function App() {
+
   return (
-    <>
-      <h1>Yash Gupta !</h1>
-    </>
+    <div>
+      <Navbar />
+
+    </div>
   );
 }
 
