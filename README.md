@@ -11,7 +11,8 @@ A WEBSITE FOR FRESHERS IT BRANCH
 4. <a href="https://github.com/Samrudhi8">Samrudhi Panda</a>
 5. <a href="https://github.com/padmakshimandal">Padmakshi Mandal</a>
 6. <a> Virag</a>
-7. <a >Smita</a>
-8. <a >Aditya</a>
+7. <a href="https://github.com/smita50">Smita Tarai</a>
+8. <a href="https://github.com/adityasandy313">Aditya</a>
 9. <a href="https://github.com/Simran1604">Simran Pattnaik</a>
+10. <a href="https://github.com/gospeller986">Satyajit</a>
 
