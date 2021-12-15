@@ -1,73 +1,70 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import "./NavBar.css";
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import ListIcon from "@mui/icons-material/List";
+import { makeStyles } from "@material-ui/core/styles";
+import logo1 from "./../../../Assets/gifs/logo.gif";
 
-function NavBar() {
-  const [click, setClick] = useState(false);
+const useStyles = makeStyles((theme) => ({
+  appbar: {
+    background: "none",
+    backgroundColor: "black",
+  },
 
-  const handleClick = () => setClick(!click);
+  title: {
+    color: "#ffffff",
+  },
+}));
+
+function Navbar() {
+  const classes = useStyles();
+
   return (
-    <>
-      <nav className="navbar">
-        <div className="nav-container">
-          <NavLink exact to="/" className="nav-logo">
-            CodeBucks
-            <i className="fas fa-code"></i>
-          </NavLink>
-
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Home
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/about"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                About
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/blog"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Blog
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/contact"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Contact Us
-              </NavLink>
-            </li>
-          </ul>
-          <div className="nav-icon" onClick={handleClick}>
-            <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
-          </div>
-        </div>
-      </nav>
-    </>
+    <Box sx={{ flexGrow: 1 }} className={classes.appbar}>
+      <AppBar position="static" color="transparent" className={classes.appbar}>
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="primary"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+            <ListIcon />
+          </IconButton>
+          <img src={logo1} alt="logo" width="80" />
+          <Typography
+            variant="h6"
+            color="default"
+            component="div"
+            sx={{ flexGrow: 1 }}
+            className={classes.title}
+          >
+            UNITY
+          </Typography>
+          <Button color="info" href="/">
+            Home
+          </Button>
+          <Button color="info" href="/123">
+            Dashoard
+          </Button>
+          <Button color="info" href="/123/0">
+            TaskPage
+          </Button>
+          <Button color="info" href="/123/resource">
+            Resource
+          </Button>
+          <Button color="info" href="/login">
+            Login
+          </Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 }
 
-export default NavBar;
+export default Navbar;

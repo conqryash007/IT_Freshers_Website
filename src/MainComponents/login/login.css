@@ -1,8 +1,9 @@
 .bg {
-  background-image: url("./../../Assets/images/giphy4.gif");
+  /* background-image: url("./../../Assets/gifs/giphy4.gif");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+  background-color: black;
 }
 a {
   cursor: pointer;

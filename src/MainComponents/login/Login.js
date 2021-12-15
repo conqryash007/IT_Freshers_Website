@@ -2,7 +2,10 @@ import React, { useState, useContext } from "react";
 import "./login.css";
 import { AuthContext } from "./../../Shared/Context/Auth-context";
 import { useHttp } from "./../../Shared/Hooks/http-hook";
-import logo from "./../../Assets/images/logo.gif";
+import logo from "./../../Assets/gifs/logo.gif";
+import Navbar from "./../../Shared/Components/Navbar/Navbar";
+import Particle from "./../../Shared/Components/Particle/Particle";
+
 export default function Login() {
   const Auth = useContext(AuthContext);
 
@@ -51,6 +54,8 @@ export default function Login() {
 
   return (
     <>
+      <Navbar />
+      <Particle />
       <div className="bg">
         <form onSubmit={submitFormHandler} name="myform">
           <div className="section" id="on">

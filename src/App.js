@@ -1,10 +1,10 @@
 import { useState, useCallback, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Homepage from "./MainComponents/Homepage/Homepage";
+import Homepage from "./MainComponents/Homepage/Home";
 import Login from "./MainComponents/login/Login";
 import Resource from "./MainComponents/resource/Resource";
-import Task from "./MainComponents/taskpage/Task";
+import Task from "./MainComponents/taskpage/Taskpage";
 import Dashboard from "./MainComponents/dashboard/Dashboard";
 import { AuthContext } from "./Shared/Context/Auth-context";
 

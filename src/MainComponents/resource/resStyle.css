@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.bg-main {
+  /* background: linear-gradient(to bottom, #301934, #333f63, #715c8c); */
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+.head1 {
+  text-align: center;
+  color: plum;
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  padding-top: 30px;
+  animation-name: swipe1;
+  animation-duration: 0.9s;
+}
+
+.head2 {
+  text-align: center;
+  color: bisque;
+  font-family: "Caveat", cursive;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  animation: swipe2 2s;
+}
+.nav {
+  height: 50px;
+}
+.logo {
+  height: 10rem;
+  float: left;
+}
+
+@keyframes swipe1 {
+  from {
+    font-size: 0px;
+  }
+  to {
+    font-size: 50px;
+  }
+}
+
+@keyframes swipe2 {
+  from {
+    font-size: 0px;
+  }
+  to {
+    font-size: 25px;
+  }
+}
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 300px;
+  perspective: 1000px;
+  margin-left: 10px;
+  display: flex;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #28112c;
+  color: black;
+  border-radius: 1rem;
+  border: solid rgb(107, 69, 107) 2px;
+}
+
+.flip-card-back {
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.548) 53%,
+    rgba(0, 0, 0, 1) 76%
+  );
+
+  transform: rotateY(180deg);
+  border-radius: 1rem;
+  border: solid rgb(107, 69, 107) 2px;
+}
+.tag {
+  color: wheat;
+  font-size: 20px;
+  font-family: "Bebas Neue", cursive;
+}
+.skills h3,
+.achievements h3 {
+  color: wheat;
+  text-align: center;
+  font-size: 17px;
+  font-family: "Bebas Neue", cursive;
+  padding: 0;
+}
+.para {
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  font-family: "Courgette", cursive;
+}
+.contact {
+  color: wheat;
+  text-align: center;
+  font-size: 12px;
+  font-family: "Courgette", cursive;
+}
+.name {
+  font-size: 25px;
+  color: wheat;
+}
+.id {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: white;
+}
+.img-001 {
+  width: 100%;
+  height: 80%;
+  border-radius: 1rem;
+}
+.container-001 {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
