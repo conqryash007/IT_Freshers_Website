@@ -77,7 +77,7 @@ export default function Login() {
                     label="asas"
                   />
                   <label className="word">VER</label>
-                  <div className="card-3d-wrap mx-auto">
+                  <div className="card-3d-wrap-001 mx-auto">
                     <div className="card-3d-wrapper">
                       <div className="card-front">
                         <div className="center-wrap">
