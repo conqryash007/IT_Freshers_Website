@@ -102,7 +102,7 @@ h6 span {
   transform: rotateY(180deg);
   padding-bottom: 36px;
 }
-.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
+.checkbox:checked ~ .card-3d-wrap-001 .card-3d-wrapper {
   transform: rotateY(180deg);
 }
 .center-wrap {
@@ -288,7 +288,7 @@ h6 span {
     width: 100%;
   }
 
-  .card-3d-wrap {
+  .card-3d-wrap-001 {
     width: 90%;
   }
 }
