@@ -15,3 +15,5 @@ A WEBSITE FOR FRESHERS IT BRANCH
 8. <a> Virag</a>
 9. <a href="https://github.com/smita50">Smita Tarai</a>
 10. <a href="https://github.com/Simran1604">Simran Pattnaik</a>
+
+## THE PROJECT IS LIVE :- <a href="https://freshit.netlify.app/">Click Here!</a>
