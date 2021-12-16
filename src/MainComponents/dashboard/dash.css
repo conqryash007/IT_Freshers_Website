@@ -1,0 +1,17 @@
+.golText {
+  font-family: "Rubik", sans-serif;
+
+  display: inline; /* SAFARI */
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Lager_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 20 20' style='enable-background:new 0 0 20 20;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FF9933;%7D .st1%7Bfill:none;stroke:%23ED7300;stroke-width:2;stroke-miterlimit:10;%7D .st2%7Bfill:none;stroke:%23FFCC66;stroke-width:3;stroke-miterlimit:10;%7D%0A%3C/style%3E%3Crect y='0' class='st0' width='20' height='20'/%3E%3Cline class='st1' x1='1' y1='22' x2='22' y2='1'/%3E%3Cline class='st1' x1='19' y1='22' x2='-2' y2='1'/%3E%3Cline class='st2' x1='-0.5' y1='-0.5' x2='20.5' y2='20.5'/%3E%3Cline class='st2' x1='-0.5' y1='20.5' x2='20.5' y2='-0.5'/%3E%3C/svg%3E%0A");
+  background-size: 10px 10px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ff9933;
+}
+
+.golText span {
+  font-size: 0.5em;
+  line-height: 0.9em;
+}

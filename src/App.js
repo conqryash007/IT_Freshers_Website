@@ -13,27 +13,35 @@ let timerId;
 function App() {
   const [token, setToken] = useState(null);
   const [userId, setUserId] = useState(null);
+  const [uid, setUid] = useState(null);
   const [expiryTime, setExpiryTime] = useState(null);
 
-  console.log(userId, token);
+  console.log(userId, uid, token);
 
-  const login = useCallback((id, token, expirationTime) => {
+  const login = useCallback((id, uuid, token, expirationTime) => {
     const expiry =
       expirationTime || new Date(new Date().getTime() + 1000 * 60 * 60 * 6);
     setExpiryTime(expiry);
 
     localStorage.setItem(
       "userData",
-      JSON.stringify({ userId: id, token: token, expiry: expiry.toISOString() })
+      JSON.stringify({
+        userId: id,
+        uid: uuid,
+        token: token,
+        expiry: expiry.toISOString(),
+      })
     );
     setToken(token);
     setUserId(id);
+    setUid(uuid);
   }, []);
 
   const logout = useCallback(() => {
     setToken(null);
     setUserId(null);
     setExpiryTime(null);
+    setUid(null);
     localStorage.removeItem("userData");
   }, []);
 
@@ -52,7 +60,7 @@ function App() {
     if (stored) {
       stored = JSON.parse(stored);
       if (stored.token && new Date(stored.expiry) > new Date()) {
-        login(stored.userId, stored.token, new Date(stored.expiry));
+        login(stored.userId, stored.uid, stored.token, new Date(stored.expiry));
       }
     }
   }, [login]);
@@ -89,6 +97,7 @@ function App() {
           isLoggedIn: !!token,
           token: token,
           userId: userId,
+          uid: uid,
           login: login,
           logout: logout,
         }}

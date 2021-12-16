@@ -5,6 +5,7 @@ import { useHttp } from "./../../Shared/Hooks/http-hook";
 import logo from "./../../Assets/gifs/logo.gif";
 import Navbar from "./../../Shared/Components/Navbar/Navbar";
 import Particle from "./../../Shared/Components/Particle/Particle";
+import Loader from "../../Shared/Components/MUIModal/Loader";
 
 export default function Login() {
   const Auth = useContext(AuthContext);
@@ -45,7 +46,8 @@ export default function Login() {
           "Content-Type": "application/json",
         }
       );
-      Auth.login(fresherInfo.userId, fresherInfo.token);
+      console.log(fresherInfo);
+      Auth.login(fresherInfo.userId, fresherInfo.uid, fresherInfo.token);
     } catch (err) {
       // console.log(err);
     }
@@ -56,6 +58,7 @@ export default function Login() {
     <>
       <Navbar />
       <Particle />
+      {loading ? <Loader message="PROCESSING ..." open={loading} /> : null}
       <div className="bg">
         <form onSubmit={submitFormHandler} name="myform">
           <div className="section" id="on">

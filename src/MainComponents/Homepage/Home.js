@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./../../Shared/Components/Navbar/Navbar";
 import { makeStyles } from "@material-ui/core/styles";
-import { AppBar, Collapse, IconButton, Toolbar } from "@material-ui/core";
+import { Collapse } from "@material-ui/core";
 import Typed from "react-typed";
 import Typography from "@material-ui/core/Typography";
 import Button from "@mui/material/Button";
