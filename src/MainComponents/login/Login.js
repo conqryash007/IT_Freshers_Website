@@ -6,8 +6,10 @@ import logo from "./../../Assets/gifs/logo.gif";
 import Navbar from "./../../Shared/Components/Navbar/Navbar";
 import Particle from "./../../Shared/Components/Particle/Particle";
 import Loader from "../../Shared/Components/MUIModal/Loader";
+import { useNavigate } from "react-router";
 
 export default function Login() {
+  const nav = useNavigate();
   const Auth = useContext(AuthContext);
 
   const [state, setState] = useState({
@@ -46,8 +48,9 @@ export default function Login() {
           "Content-Type": "application/json",
         }
       );
-      console.log(fresherInfo);
+      // console.log(fresherInfo);
       Auth.login(fresherInfo.userId, fresherInfo.uid, fresherInfo.token);
+      nav(`/${fresherInfo.uid}`);
     } catch (err) {
       // console.log(err);
     }

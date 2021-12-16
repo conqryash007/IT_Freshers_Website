@@ -16,7 +16,7 @@ function App() {
   const [uid, setUid] = useState(null);
   const [expiryTime, setExpiryTime] = useState(null);
 
-  console.log(userId, uid, token);
+  // console.log(userId, uid, token);
 
   const login = useCallback((id, uuid, token, expirationTime) => {
     const expiry =
@@ -66,16 +66,10 @@ function App() {
   }, [login]);
 
   let routes;
-  // if (!token) {
-  if (true) {
+  if (!token) {
     routes = (
       <>
         <Route path="/login" element={<Login />} exact></Route>
-        {/*for testing will be deleted*/}
-        <Route path="/:id" element={<Dashboard />} exact></Route>
-        <Route path="/:id/0" element={<Task />} exact></Route>
-        <Route path="/:id/resource" element={<Resource />} exact></Route>
-
         <Route path="*" element={<Homepage />} exact></Route>
       </>
     );

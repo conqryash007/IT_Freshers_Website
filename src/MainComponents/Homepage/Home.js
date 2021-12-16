@@ -2,17 +2,14 @@ import React from "react";
 import Navbar from "./../../Shared/Components/Navbar/Navbar";
 import { makeStyles } from "@material-ui/core/styles";
 import { Collapse } from "@material-ui/core";
-import Typed from "react-typed";
-import Typography from "@material-ui/core/Typography";
-import Button from "@mui/material/Button";
+// import Typography from "@material-ui/core/Typography";
 import Box from "@mui/material/Box";
-import Cards from "./components/Cards";
+import Footer from "./components/Footer";
 import Particle from "../../Shared/Components/Particle/Particle";
-
 import logo from "./../../Assets/gifs/logo.gif";
 import Fade from "react-reveal/Fade";
-import LightSpeed from "react-reveal/LightSpeed";
-import meme from "./../../Assets/gifs/meme.gif";
+// import LightSpeed from "react-reveal/LightSpeed";
+import drg2 from "./../../Assets/gifs/drg2.gif";
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
@@ -28,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
   },
   root: {
     background: "#000000",
-    height: "400vh",
   },
 
   title: {
@@ -55,21 +51,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#FF0099",
     textTransform: "uppercase",
   },
-  typedContainer: {
-    position: "absolute",
-    top: "80%",
-    left: "50%",
-    transform: "translate(-50%,-50%)",
-    textAlign: "center",
-    zIndex: 1,
-  },
 
-  meme: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: "80px",
-  },
   memetext: {
     color: "#ffffff",
     display: "flex",
@@ -91,15 +73,18 @@ function Home() {
             <Collapse in={true}>
               <div>
                 <div>
-                  <img src={logo} alt="unity" />
+                  <img src={logo} style={{ width: "40vw" }} alt="unity" />
                   <Fade right>
                     <h1 className={classes.title}>
                       {" "}
                       <span className={classes.boom}>
                         {" "}
-                        Welcome to <br /> the coolest Branch{" "}
+                        Welcome{" "}
+                        <span className={classes.colourTitle}>
+                          Warriors{" "}
+                        </span>{" "}
+                        of IIIT Bssr
                       </span>{" "}
-                      <span className={classes.colourTitle}> IT </span>{" "}
                     </h1>
                   </Fade>
                 </div>
@@ -107,35 +92,28 @@ function Home() {
             </Collapse>
           </div>
 
-          <Box className={classes.typedContainer}>
-            <LightSpeed right>
-              <Typography className={classes.subtitle} variant="h5">
-                <Typed
-                  strings={["ABHI TOH PARTY", "SHURU HUI HAI"]}
-                  typeSpeed={40}
-                  backSpeed={60}
-                  loop
-                />
-              </Typography>
-            </LightSpeed>
-          </Box>
           <Fade left>
-            <div className={classes.meme}>
-              <img src={meme} alt="meme" />
-            </div>
-          </Fade>
-          <Fade right>
             <div className={classes.memetext}>
-              <h2>Phele login toh karo !!!</h2>
-              <Button color="info" href="/signup">
-                Login
-              </Button>
+              <h2>Get Started</h2>
+              <div className={classes.img}>
+                <img
+                  src={drg2}
+                  alt="meme"
+                  style={{ width: "590px", height: "400px" }}
+                />
+              </div>
+              <div>
+                <h2>
+                  by <span className={classes.colourTitle}>loging in </span>.
+                </h2>
+              </div>
             </div>
-          </Fade>
-          <Fade left>
-            <Cards />
+            <div className={classes.memetext}>
+              <h1 style={{ marginBottom: "50px" }}>Bienvenido a ella rama</h1>
+            </div>
           </Fade>
         </Box>
+        <Footer />
       </React.Fragment>
     </>
   );

@@ -8,6 +8,7 @@ import IconButton from "@mui/material/IconButton";
 import ListIcon from "@mui/icons-material/List";
 import { makeStyles } from "@material-ui/core/styles";
 import logo1 from "./../../../Assets/gifs/logo.gif";
+import { AuthContext } from "./../../Context/Auth-context";
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
@@ -21,8 +22,39 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Navbar() {
+  const auth = React.useContext(AuthContext);
   const classes = useStyles();
 
+  let links;
+  if (!auth.token) {
+    links = (
+      <>
+        <Button color="info" href="/">
+          Home
+        </Button>
+        <Button color="info" href="/login">
+          Login
+        </Button>
+      </>
+    );
+  } else {
+    links = (
+      <>
+        <Button color="info" href="/">
+          Home
+        </Button>
+        <Button color="info" href={`/${auth.uid}`}>
+          Dashoard
+        </Button>
+        <Button color="info" href={`/${auth.uid}/resource`}>
+          Resource
+        </Button>
+        <Button color="info" onClick={auth.logout}>
+          Logout
+        </Button>
+      </>
+    );
+  }
   return (
     <Box sx={{ flexGrow: 1 }} className={classes.appbar}>
       <AppBar position="static" color="transparent" className={classes.appbar}>
@@ -46,21 +78,7 @@ function Navbar() {
           >
             UNITY
           </Typography>
-          <Button color="info" href="/">
-            Home
-          </Button>
-          <Button color="info" href="/123">
-            Dashoard
-          </Button>
-          <Button color="info" href="/123/0">
-            TaskPage
-          </Button>
-          <Button color="info" href="/123/resource">
-            Resource
-          </Button>
-          <Button color="info" href="/login">
-            Login
-          </Button>
+          {links}
         </Toolbar>
       </AppBar>
     </Box>

@@ -19,7 +19,7 @@ export default function Login() {
         const data = await sendRequest(
           `${process.env.REACT_APP_BACKEND_URL}/api/freshers/${auth.uid}`
         );
-        console.log(data);
+        // console.log(data);
         setUserData(data);
       } catch (err) {
         console.log(err);

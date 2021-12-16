@@ -21,7 +21,12 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "10px",
   },
 }));
-
+const sty = {
+  textAlign: "center",
+  maxWidth: "900px",
+  backgroundColor: "rgb(123, 74, 176,1)",
+  color: "white",
+};
 export default function Papers(props) {
   const nav = useNavigate();
   const { loading, sendRequest, clearError } = useHttp();
@@ -37,7 +42,7 @@ export default function Papers(props) {
       setError("You should reconsider your submission");
     } else {
       let sendAns = JSON.stringify({ answer: ans });
-      console.log(sendAns);
+      // console.log(sendAns);
       try {
         await sendRequest(
           `${process.env.REACT_APP_BACKEND_URL}/api/tasks/check/${auth.uid}/0/${qid}`,
@@ -74,12 +79,11 @@ export default function Papers(props) {
             flexWrap: "wrap",
             "& > :not(style)": {
               m: 1,
-              width: 900,
-              height: 250,
+              width: "900px",
             },
           }}
         >
-          <Paper elevation={3} style={{ textAlign: "center" }}>
+          <Paper elevation={3} style={sty}>
             <h1> {fakeName} </h1>
             <p>{riddle}</p>
             <TextField

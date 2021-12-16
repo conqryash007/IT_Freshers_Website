@@ -12,7 +12,7 @@ import Paper from "@mui/material/Paper";
 const useStyles = makeStyles((theme) => ({
   root: {
     background: "#000000",
-    minHeight: "100vh",
+    minHeight: "110vh",
   },
   title: {
     color: "#ffffff",
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     justifyContent: "center",
     display: "flex",
-    marginLeft: "100px",
+    margin: "50px",
     flexDirection: "column",
   },
 }));
@@ -75,11 +75,16 @@ const Taskpage = () => {
             />
           );
         } else {
+          const back = userData.user.task0[curr.indx] === 0 ? "red" : "green";
           return (
             <Paper
               key={curr.id}
               elevation={3}
-              style={{ textAlign: "center", marginTop: "20px" }}
+              style={{
+                textAlign: "center",
+                marginTop: "20px",
+                backgroundColor: back,
+              }}
             >
               <h3> SOMETIMES YOU DON'T GET A SECOND CHANCE </h3>
               <p>Already Answered.</p>
