@@ -26,6 +26,36 @@ const senior = [
     img: b420049,
     contact: "LinkedIn, Github",
   },
+  {
+    name: "Simran Pattnaik ",
+    id: "B420049",
+    skills: `Competitive Programming
+    App Development
+    Machine Learning`,
+    achiev: "Google Kickstart Round 2",
+    img: b420049,
+    contact: "LinkedIn, Github",
+  },
+  {
+    name: "Simran Pattnaik ",
+    id: "B420049",
+    skills: `Competitive Programming
+    App Development
+    Machine Learning`,
+    achiev: "Google Kickstart Round 2",
+    img: b420049,
+    contact: "LinkedIn, Github",
+  },
+  {
+    name: "Simran Pattnaik ",
+    id: "B420049",
+    skills: `Competitive Programming
+    App Development
+    Machine Learning`,
+    achiev: "Google Kickstart Round 2",
+    img: b420049,
+    contact: "LinkedIn, Github",
+  },
 ];
 
 export default function Resource() {

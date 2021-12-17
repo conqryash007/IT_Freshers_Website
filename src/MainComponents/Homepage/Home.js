@@ -1,14 +1,13 @@
 import React from "react";
 import Navbar from "./../../Shared/Components/Navbar/Navbar";
 import { makeStyles } from "@material-ui/core/styles";
+import { useMediaQuery, useTheme } from "@material-ui/core";
 import { Collapse } from "@material-ui/core";
-// import Typography from "@material-ui/core/Typography";
 import Box from "@mui/material/Box";
 import Footer from "./components/Footer";
 import Particle from "../../Shared/Components/Particle/Particle";
 import logo from "./../../Assets/gifs/logo.gif";
-import Fade from "react-reveal/Fade";
-// import LightSpeed from "react-reveal/LightSpeed";
+import Zoom from "react-reveal/Zoom";
 import drg2 from "./../../Assets/gifs/drg2.gif";
 
 const useStyles = makeStyles((theme) => ({
@@ -45,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     marginTop: "150px",
+    height: "78vh",
   },
 
   subtitle: {
@@ -62,6 +62,14 @@ const useStyles = makeStyles((theme) => ({
 
 function Home() {
   const classes = useStyles();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const sty = {};
+  if (isMobile) {
+    sty.flexDirection = "column";
+  } else {
+    sty.flexDirection = "row";
+  }
 
   return (
     <>
@@ -73,27 +81,20 @@ function Home() {
             <Collapse in={true}>
               <div>
                 <div>
-                  <img src={logo} style={{ width: "40vw" }} alt="unity" />
-                  <Fade right>
+                  <img src={logo} alt="unity" />
+                  <Zoom bottom>
                     <h1 className={classes.title}>
-                      {" "}
-                      <span className={classes.boom}>
-                        {" "}
-                        Welcome{" "}
-                        <span className={classes.colourTitle}>
-                          Warriors{" "}
-                        </span>{" "}
-                        of IIIT Bssr
-                      </span>{" "}
+                      Welcome
+                      <span className={classes.colourTitle}>Warriors </span> of
+                      IIIT Bssr
                     </h1>
-                  </Fade>
+                  </Zoom>
                 </div>
               </div>
             </Collapse>
           </div>
-
-          <Fade left>
-            <div className={classes.memetext}>
+          <Zoom bottom>
+            <div className={classes.memetext} style={sty}>
               <h2>Get Started</h2>
               <div className={classes.img}>
                 <img
@@ -108,10 +109,12 @@ function Home() {
                 </h2>
               </div>
             </div>
+          </Zoom>
+          <Zoom bottom>
             <div className={classes.memetext}>
-              <h1 style={{ marginBottom: "50px" }}>Bienvenido a ella rama</h1>
+              <h1 style={{ marginBottom: "200px" }}>Bienvenido a ella rama</h1>
             </div>
-          </Fade>
+          </Zoom>
         </Box>
         <Footer />
       </React.Fragment>

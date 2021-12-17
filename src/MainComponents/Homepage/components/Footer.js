@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div>
       <div className="footer-001">
-        <div class="middle_section">
+        <div className="middle_section">
           <section>
             <span>
               <a href="https://github.com/conqryash007/IT_Freshers_Website">
@@ -21,7 +21,7 @@ export default function Footer() {
             </span>
           </section>
         </div>
-        <div class="bottom_section">
+        <div className="bottom_section">
           <span>Copyright © 2021. All rights reserved. Guptaji and Co.</span>
         </div>
       </div>
