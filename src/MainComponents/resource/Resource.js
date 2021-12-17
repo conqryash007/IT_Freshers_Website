@@ -27,14 +27,24 @@ const senior = [
     contact: "LinkedIn, Github",
   },
   {
-    name: "Simran Pattnaik ",
-    id: "B420049",
-    skills: `Competitive Programming
-    App Development
+    name: "Aditya Sandilya",
+    id: "B420003",
+    skills: `Competitive Programming,
+    Web Development,
     Machine Learning`,
-    achiev: "Google Kickstart Round 2",
-    img: b420049,
-    contact: "LinkedIn, Github",
+    achiev: "Google Kickstart Round 2, Dogs don't bite me",
+    img: b420003,
+    contact: "LinkedIn, Tinder",
+  },
+  {
+    name: "Aditya Sandilya",
+    id: "B420003",
+    skills: `Competitive Programming,
+    Web Development,
+    Machine Learning`,
+    achiev: "Google Kickstart Round 2, Dogs don't bite me",
+    img: b420003,
+    contact: "LinkedIn, Tinder",
   },
   {
     name: "Simran Pattnaik ",
@@ -55,6 +65,26 @@ const senior = [
     achiev: "Google Kickstart Round 2",
     img: b420049,
     contact: "LinkedIn, Github",
+  },
+  {
+    name: "Simran Pattnaik ",
+    id: "B420049",
+    skills: `Competitive Programming
+    App Development
+    Machine Learning`,
+    achiev: "Google Kickstart Round 2",
+    img: b420049,
+    contact: "LinkedIn, Github",
+  },
+  {
+    name: "Aditya Sandilya",
+    id: "B420003",
+    skills: `Competitive Programming,
+    Web Development,
+    Machine Learning`,
+    achiev: "Google Kickstart Round 2, Dogs don't bite me",
+    img: b420003,
+    contact: "LinkedIn, Tinder",
   },
 ];
 
