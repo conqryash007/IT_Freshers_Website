@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     color: "#ffffff",
     marginTop: "100px",
-    marginLeft: "40px",
+    mergin: "auto",
   },
 
   boom: {
@@ -57,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    textAlign: "center",
   },
 }));
 
@@ -65,8 +66,14 @@ function Home() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const sty = {};
+  let log = {};
+  let drgimg = { width: "590px", height: "400px" };
   if (isMobile) {
     sty.flexDirection = "column";
+    drgimg = { width: "100%", height: "300px" };
+    log = {
+      width: "90%",
+    };
   } else {
     sty.flexDirection = "row";
   }
@@ -74,19 +81,21 @@ function Home() {
   return (
     <>
       <React.Fragment>
-        <Particle />
+        <div style={{ width: "80vw" }}>
+          <Particle />
+        </div>
         <Box component="header" className={classes.root}>
           <Navbar />
           <div className={classes.main}>
             <Collapse in={true}>
-              <div>
+              <div style={{ textAlign: "center" }}>
                 <div>
-                  <img src={logo} alt="unity" />
+                  <img src={logo} style={log} alt="unity" />
                   <Zoom bottom>
                     <h1 className={classes.title}>
                       Welcome
                       <span className={classes.colourTitle}>Warriors </span> of
-                      IIIT Bssr
+                      IIIT Bbsr
                     </h1>
                   </Zoom>
                 </div>
@@ -97,11 +106,7 @@ function Home() {
             <div className={classes.memetext} style={sty}>
               <h2>Get Started</h2>
               <div className={classes.img}>
-                <img
-                  src={drg2}
-                  alt="meme"
-                  style={{ width: "590px", height: "400px" }}
-                />
+                <img src={drg2} alt="meme" style={drgimg} />
               </div>
               <div>
                 <h2>
@@ -112,7 +117,7 @@ function Home() {
           </Zoom>
           <Zoom bottom>
             <div className={classes.memetext}>
-              <h1 style={{ marginBottom: "200px" }}>Bienvenido a ella rama</h1>
+              <h1 style={{ marginBottom: "50px" }}>Bienvenido a ella rama</h1>
             </div>
           </Zoom>
         </Box>
