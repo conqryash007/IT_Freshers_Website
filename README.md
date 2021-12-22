@@ -3,6 +3,9 @@
 <img height="180px" width="400px" src="https://github.com/conqryash007/IT_Freshers_Website/blob/main/public/freshers-website-logo.gif" /><br/>
 A WEBSITE FOR FRESHERS IT BRANCH
   </p> 
+<hr/>
+
+## THE PROJECT IS LIVE :- <a href="https://freshit.netlify.app/">Click Here!</a>
 
 ## Team members
 1. <a href="https://github.com/ipsitasatapathy">Ipsita Satapathy</a> <=> [<a href="https://github.com/ipsitasatapathy/resources-page">SUBMISSION</a>]
@@ -16,4 +19,4 @@ A WEBSITE FOR FRESHERS IT BRANCH
 9. <a href="https://github.com/smita50">Smita Tarai</a>
 10. <a href="https://github.com/Simran1604">Simran Pattnaik</a>
 
-## THE PROJECT IS LIVE :- <a href="https://freshit.netlify.app/">Click Here!</a>
+
