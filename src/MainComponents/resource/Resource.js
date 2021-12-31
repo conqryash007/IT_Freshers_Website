@@ -1,7 +1,7 @@
 import React from "react";
 import "./resStyle.css";
 import b420003 from "./../../Assets/senior_images/b420003.jpg";
-import b420049 from "./../../Assets/senior_images/b420049.jfif";
+// import b420049 from "./../../Assets/senior_images/b420049.jfif";
 import Navbar from "./../../Shared/Components/Navbar/Navbar";
 import Particle from "./../../Shared/Components/Particle/Particle";
 
