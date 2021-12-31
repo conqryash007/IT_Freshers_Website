@@ -44,18 +44,19 @@ export default function Login() {
                 }}
               >
                 <div
+                  style={{ textAlign: "center" }}
                   className={`card-body d-flex justify-content-between ${
                     width <= 444 ? "flex-column m-auto" : ""
                   } `}
                 >
                   <h1
-                    style={{ fontSize: "4em" }}
+                    style={{ fontSize: "7vw" }}
                     className="card-title golText"
                   >
                     {userData.user.name}
                   </h1>
                   <div className="mx-3">
-                    <span style={{ fontSize: "4em" }} className="golText">
+                    <span style={{ fontSize: "7vw" }} className="golText">
                       Score:{userData.user.score[0]}
                     </span>
                   </div>

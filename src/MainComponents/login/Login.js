@@ -6,11 +6,14 @@ import logo from "./../../Assets/gifs/logo.gif";
 import Navbar from "./../../Shared/Components/Navbar/Navbar";
 import Particle from "./../../Shared/Components/Particle/Particle";
 import Loader from "../../Shared/Components/MUIModal/Loader";
+import { useMediaQuery, useTheme } from "@material-ui/core";
 import { useNavigate } from "react-router";
 
 export default function Login() {
   const nav = useNavigate();
   const Auth = useContext(AuthContext);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const [state, setState] = useState({
     userId: "",
@@ -60,7 +63,7 @@ export default function Login() {
   return (
     <>
       <Navbar />
-      <Particle />
+      {isMobile ? null : <Particle />}
       {loading ? <Loader message="PROCESSING ..." open={loading} /> : null}
       <div className="bg">
         <form onSubmit={submitFormHandler} name="myform">

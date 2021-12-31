@@ -7,6 +7,7 @@ import Papers from "./components/Papers";
 import { useHttp } from "./../../Shared/Hooks/http-hook";
 import Loader from "./../../Shared/Components/MUIModal/Loader";
 import { AuthContext } from "./../../Shared/Context/Auth-context";
+import { useMediaQuery, useTheme } from "@material-ui/core";
 import Paper from "@mui/material/Paper";
 
 const useStyles = makeStyles((theme) => ({
@@ -33,6 +34,8 @@ const Taskpage = () => {
   const { loading, sendRequest, clearError } = useHttp();
   const [userData, setUserData] = useState(null);
   const [data, setData] = useState(null);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   // to get student data
 
@@ -112,7 +115,7 @@ const Taskpage = () => {
   const classes = useStyles();
   return (
     <div>
-      <Particle />
+      {isMobile ? null : <Particle />}
       <Box component="header" className={classes.root}>
         <Navbar />
         <div className={classes.title}>

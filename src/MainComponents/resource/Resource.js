@@ -7,84 +7,64 @@ import Particle from "./../../Shared/Components/Particle/Particle";
 
 const senior = [
   {
-    name: "Aditya Sandilya",
-    id: "B420003",
-    skills: `Competitive Programming,
-    Web Development,
-    Machine Learning`,
-    achiev: "Google Kickstart Round 2, Dogs don't bite me",
+    name: "Vishal Manam",
+    id: "B420065",
+    skills: "Ah none.",
+    achiev: "Nope, none.",
     img: b420003,
-    contact: "LinkedIn, Tinder",
+    contact:
+      "9182153287 - WhatsApp, @VishalManam - Twitter, Vishal Manam - LinkedIn",
   },
   {
-    name: "Simran Pattnaik ",
-    id: "B420049",
-    skills: `Competitive Programming
-    App Development
-    Machine Learning`,
-    achiev: "Google Kickstart Round 2",
-    img: b420049,
-    contact: "LinkedIn, Github",
-  },
-  {
-    name: "Aditya Sandilya",
-    id: "B420003",
-    skills: `Competitive Programming,
-    Web Development,
-    Machine Learning`,
-    achiev: "Google Kickstart Round 2, Dogs don't bite me",
+    fakename: "Point Break",
+    riddle:
+      "Word 2 : I am the Universe's Fastest.Word 1 : I am something that always wins.Word 1 n 2 are Words from Devnagri Script.",
+    answer: "b420065",
+    indx: 1,
+    name: "Satyaprakash Sahoo",
+    id: "B220049",
+    skills: "Time Pass 😎",
+    achiev: "Slept 14 h/ day n Changed my branch 🥱",
     img: b420003,
-    contact: "LinkedIn, Tinder",
+    contact: "b220049@iiit-bh.ac.in",
   },
   {
-    name: "Aditya Sandilya",
-    id: "B420003",
-    skills: `Competitive Programming,
-    Web Development,
-    Machine Learning`,
-    achiev: "Google Kickstart Round 2, Dogs don't bite me",
+    fakename: "Halfaye",
+    riddle: "Kabhi kabhi nai roj lagta he ki apun ich bhagwan he",
+    answer: "b420036",
+    indx: 2,
+    name: "Prabhu Preetam Das",
+    id: "B420036",
+    skills: "Bunking class, baki kuchh nai ata",
+    achiev: "😐",
     img: b420003,
-    contact: "LinkedIn, Tinder",
+    contact: "Whatsapp",
   },
   {
-    name: "Simran Pattnaik ",
+    fakename: "Lightning McQueen",
+    riddle:
+      "Let me keep it easy for you, my name is inspired from a 1990s super-duper hit Bollywood Movie.Iykyk.P.S- In case the above isn't enough of a hint, there's also a movie with my name!",
+    answer: "B420049",
+    indx: 3,
+    name: "Simran Pattnaik",
     id: "B420049",
-    skills: `Competitive Programming
-    App Development
-    Machine Learning`,
-    achiev: "Google Kickstart Round 2",
-    img: b420049,
-    contact: "LinkedIn, Github",
-  },
-  {
-    name: "Simran Pattnaik ",
-    id: "B420049",
-    skills: `Competitive Programming
-    App Development
-    Machine Learning`,
-    achiev: "Google Kickstart Round 2",
-    img: b420049,
-    contact: "LinkedIn, Github",
-  },
-  {
-    name: "Simran Pattnaik ",
-    id: "B420049",
-    skills: `Competitive Programming
-    App Development
-    Machine Learning`,
-    achiev: "Google Kickstart Round 2",
-    img: b420049,
-    contact: "LinkedIn, Github",
-  },
-  {
-    name: "Aditya Sandilya",
-    id: "B420003",
-    skills: `Competitive Programming,
-    Web Development,
-    Machine Learning`,
-    achiev: "Google Kickstart Round 2, Dogs don't bite me",
+    skills: "Flutter, Hive, Firestore Firebase.",
+    achiev:
+      "PSoc-Android dev Team, GDSC, IIIT BBSR- Android Dev Team, Founder- WDGAF Society ;)",
     img: b420003,
-    contact: "LinkedIn, Tinder",
+    contact: "LinkedIn, Instagram",
+  },
+  {
+    fakename: "Bokka Subbarao",
+    riddle: "",
+    answer: "b420030",
+    indx: 4,
+    name: "Kaikala Sai Sri Harish",
+    id: "b420030",
+    skills: "Editor",
+    achiev: "",
+    img: b420003,
+    contact: "",
   },
 ];
 

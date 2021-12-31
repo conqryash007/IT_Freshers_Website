@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 const sty = {
   textAlign: "center",
   maxWidth: "900px",
-  backgroundColor: "rgb(123, 74, 176,1)",
+  backgroundColor: "rgb(153, 73, 12,1)",
   color: "white",
 };
 export default function Papers(props) {
